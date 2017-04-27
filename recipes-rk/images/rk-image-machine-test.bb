@@ -5,8 +5,10 @@ DESCRIPTION = "A image used for test and benchmark."
 
 IMAGE_FEATURES += " \
 	debug-tweaks \
+	dbg-pkgs \
 	tools-testapps \
 	tools-profile \
+	tools-debug \
 "
 
 require recipes-rk/images/rk-image-multimedia.bb
