@@ -1,3 +1,6 @@
+# Copyright (C) 2017 Fuzhou Rockchip Electronics Co., Ltd
+# Released under the MIT license (see COPYING.MIT for the terms)
+
 SUMMARY = "Set the application that will run automatically"
 
 LICENSE = "MIT"
