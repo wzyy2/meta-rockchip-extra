@@ -3,10 +3,10 @@ DESCRIPTION = "This is the Rockchip Opensource linux demo application. It helps 
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://COPYING.MIT;md5=3da9cfbcb788c80a0384361b4de20420"
 
-DEPENDS = "qtmultimedia qtquickcontrols2 qt3d"
+DEPENDS = "qtmultimedia qtquickcontrols2 qt3d qtwebengine"
 
 SRC_URI = "git://github.com/wzyy2/rockery.git;"
-SRCREV = "${AUTOREV}"
+SRCREV = "149ebfba11b857ba2459f768537ce5154d0c5d4c"
 
 S = "${WORKDIR}/git"
 
