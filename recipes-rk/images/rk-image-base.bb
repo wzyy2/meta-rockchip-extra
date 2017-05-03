@@ -23,6 +23,7 @@ RF_INSTALL = " \
 "
 
 CORE_IMAGE_EXTRA_INSTALL += " \
+	io \
 	${TASK_INSTALL} \
 	${RF_INSTALL} \
 	${@bb.utils.contains('DISTRO_FEATURES', 'x11', '', '', d)} \
