@@ -12,31 +12,29 @@ USE_WL = "${@bb.utils.contains("DISTRO_FEATURES", "wayland", "yes", "no", d)}"
 DEPENDS = "rockery"
 
 SRC_URI = " \
-	file://mini-custom-x-session \
+	file://S124autostart-x11.sh \
 	file://S124autostart-wayland.sh \
 	file://S124autostart.sh \
 "
 S = "${WORKDIR}"
 
-inherit update-alternatives
-
-ALTERNATIVE_${PN} = "x-session-manager"
-ALTERNATIVE_TARGET[x-session-manager] = "${bindir}/mini-custom-x-session"
-ALTERNATIVE_PRIORITY = "80"
+inherit update-rc.d
 
 do_install() {
+	install -d ${D}/${bindir}/init.d
 
 	if [ "${USE_X11}" = "yes" ]; then
-		install -d ${D}/${bindir}
-		install -m 0755 ${S}/mini-custom-x-session ${D}/${bindir}
+		install -m 0755 ${S}/S124autostart-x11.sh ${D}/${bindir}/init.d/
 	elif [ "${USE_WL}" = "yes" ]; then
 		install -d ${D}/${sysconfdir}/rc5.d
-		install -m 0755 ${S}/S124autostart-wayland.sh ${D}/${sysconfdir}/rc5.d
+		install -m 0755 ${S}/S124autostart-wayland.sh ${D}/${bindir}/init.d/
 	else
 		install -d ${D}/${sysconfdir}/rc5.d
-		install -m 0755 ${S}/S124autostart.sh ${D}/${sysconfdir}/rc5.d
+		install -m 0755 ${S}/S124autostart.sh ${D}/${bindir}/init.d/
 	fi
-
 }
 
-RDEPENDS_${PN} = "sudo"
+RDEPENDS_${PN} = "bash"
+
+INITSCRIPT_NAME = "dvfs-rules.sh"
+INITSCRIPT_PARAMS = "start 100 5 3 ."

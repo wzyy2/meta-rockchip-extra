@@ -10,9 +10,7 @@
 #					 last tep in the boot process.
 ### END INIT INFO
 
-export QT_QPA_PLATFORM=wayland-egl
-export XDG_RUNTIME_DIR=/run/user/0
-export WAYLAND_DISPLAY=wayland-0
+export DISPLAY=:0.0
 
 cd /usr/share/rockery-git/
 sleep 1 && ./rockery -f &> /dev/null &
