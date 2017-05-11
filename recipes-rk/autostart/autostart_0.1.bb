@@ -10,29 +10,27 @@ USE_X11 = "${@bb.utils.contains("DISTRO_FEATURES", "x11", "yes", "no", d)}"
 USE_WL = "${@bb.utils.contains("DISTRO_FEATURES", "wayland", "yes", "no", d)}"
 
 SRC_URI = " \
-	file://S124autostart-x11.sh \
-	file://S124autostart-wayland.sh \
-	file://S124autostart.sh \
+	file://autostart-x11.sh \
+	file://autostart-wayland.sh \
+	file://autostart.sh \
 "
 S = "${WORKDIR}"
 
 inherit update-rc.d
 
 do_install() {
-	install -d ${D}/${bindir}/init.d
+	install -d ${D}/${sysconfdir}/init.d
 
 	if [ "${USE_X11}" = "yes" ]; then
-		install -m 0755 ${S}/S124autostart-x11.sh ${D}/${bindir}/init.d/
+		install -m 0755 ${S}/autostart-x11.sh ${D}/${sysconfdir}/init.d/autostart.sh
 	elif [ "${USE_WL}" = "yes" ]; then
-		install -d ${D}/${sysconfdir}/rc5.d
-		install -m 0755 ${S}/S124autostart-wayland.sh ${D}/${bindir}/init.d/
+		install -m 0755 ${S}/autostart-wayland.sh ${D}/${sysconfdir}/init.d/autostart.sh
 	else
-		install -d ${D}/${sysconfdir}/rc5.d
-		install -m 0755 ${S}/S124autostart.sh ${D}/${bindir}/init.d/
+		install -m 0755 ${S}/autostart.sh ${D}/${sysconfdir}/init.d/autostart.sh
 	fi
 }
 
 RDEPENDS_${PN} = "bash"
 
-INITSCRIPT_NAME = "dvfs-rules.sh"
+INITSCRIPT_NAME = "autostart.sh"
 INITSCRIPT_PARAMS = "start 100 5 3 ."
