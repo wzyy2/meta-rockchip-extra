@@ -9,8 +9,6 @@ LIC_FILES_CHKSUM = "file://${COREBASE}/meta/COPYING.MIT;md5=3da9cfbcb788c80a0384
 USE_X11 = "${@bb.utils.contains("DISTRO_FEATURES", "x11", "yes", "no", d)}"
 USE_WL = "${@bb.utils.contains("DISTRO_FEATURES", "wayland", "yes", "no", d)}"
 
-DEPENDS = "rockery"
-
 SRC_URI = " \
 	file://S124autostart-x11.sh \
 	file://S124autostart-wayland.sh \

@@ -12,5 +12,5 @@
 
 export DISPLAY=:0.0
 
-cd /usr/share/rockery-git/
-sleep 1 && ./rockery -f &> /dev/null &
+cd /usr/share/qt5everywheredemo-1.0/
+sleep 1 && ./QtDemo &> /dev/null &

@@ -21,4 +21,5 @@ cat > /tmp/qt.json <<EOF
 }
 EOF
 
-/usr/share/rockery-git/rockery &> /dev/null &
+cd /usr/share/qt5everywheredemo-1.0/
+./QtDemo &> /dev/null &
