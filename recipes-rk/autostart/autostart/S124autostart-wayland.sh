@@ -10,6 +10,8 @@
 #					 last tep in the boot process.
 ### END INIT INFO
 
+# export QT_GSTREAMER_WIDGET_VIDEOSINK=waylandsink
+# export QT_GSTREAMER_WINDOW_VIDEOSINK=waylandsink
 export QT_QPA_PLATFORM=wayland-egl
 export XDG_RUNTIME_DIR=/run/user/0
 export WAYLAND_DISPLAY=wayland-0

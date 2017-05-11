@@ -8,8 +8,10 @@
 # Short-Description: Start application at boot time
 # Description:       This script will run the application as the
 #					 last tep in the boot process.
-### END INIT INFO
+### END INIT INFOsync
 
+# export QT_GSTREAMER_WIDGET_VIDEOSINK=rkximagesink
+# export QT_GSTREAMER_WINDOW_VIDEOSINK=rkximagesink
 export DISPLAY=:0.0
 
 cd /usr/share/qt5everywheredemo-1.0/
