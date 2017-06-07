@@ -25,6 +25,14 @@ PREFERRED_PROVIDER_virtual/libgles1 = "rockchip-mali"
 PREFERRED_PROVIDER_virtual/libgles2 = "rockchip-mali"
 PREFERRED_PROVIDER_virtual/libopencl = "rockchip-mali"
 
+PREFERRED_VERSION_gstreamer1.0 = "1.12.0"
+PREFERRED_VERSION_gstreamer1.0-plugins-base = "1.12.0"
+PREFERRED_VERSION_gstreamer1.0-plugins-good = "1.12.0"
+PREFERRED_VERSION_gstreamer1.0-plugins-bad= "1.12.0"
+PREFERRED_VERSION_gstreamer1.0-plugins-ugly = "1.12.0"
+PREFERRED_VERSION_gstreamer1.0-rtsp-server = "1.12.0"
+PREFERRED_VERSION_gstreamer1.0-libav = "1.12.0"
+
 # Workaround: libmali.so provided by rk having no SONAME field in it
 # so add it to fix rdepends problems
 ASSUME_SHLIBS += "libEGL.so:rockchip-mali"
