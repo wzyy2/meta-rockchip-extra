@@ -18,8 +18,8 @@ do_install () {
 	install -d ${D}/system/etc/firmware/
 	cp -rf ${S}/firmware/wifi/* ${D}/system/etc/firmware/
 
-	install -d ${D}/lib/firmware/brcm/
-	cp -rf ${S}/firmware/bluetooth/bcm*.hcd ${D}/lib/firmware/brcm/
+	install -d ${D}/etc/firmware/
+	cp -rf ${S}/firmware/bluetooth/*.hcd ${D}/etc/firmware/
 }
 
 PACKAGES =+ "${PN}-wifi \
@@ -27,4 +27,4 @@ PACKAGES =+ "${PN}-wifi \
 "
 
 FILES_${PN}-wifi = "/system/etc/*"
-FILES_${PN}-bt = "/lib/firmware/brcm/*"
+FILES_${PN}-bt = "/etc/firmware/*"

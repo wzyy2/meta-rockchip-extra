@@ -10,15 +10,11 @@
 #					 last tep in the boot process.
 ### END INIT INFO
 
-export QT_QPA_PLATFORM=eglfs
-export QT_QPA_EGLFS_KMS_CONFIG=/tmp/qt.json
+# export QT_GSTREAMER_WIDGET_VIDEOSINK=waylandsink
+# export QT_GSTREAMER_WINDOW_VIDEOSINK=waylandsink
+export QT_QPA_PLATFORM=wayland-egl
+export XDG_RUNTIME_DIR=/run/user/0
+export WAYLAND_DISPLAY=wayland-0
 
-cat > /tmp/qt.json <<EOF
-{
-  "device": "/dev/dri/card0",
-  "hwcursor": true,
-  "pbuffers": true
-}
-EOF
-
-/usr/share/rockery-git/rockery &> /dev/null &
+cd /usr/share/qt5everywheredemo-1.0/
+sleep 1 && ./QtDemo &> /dev/null &

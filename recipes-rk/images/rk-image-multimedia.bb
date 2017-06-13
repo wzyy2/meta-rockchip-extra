@@ -9,4 +9,5 @@ CORE_IMAGE_EXTRA_INSTALL += " \
 	alsa-utils \
 	libdrm-rockchip \
 	packagegroup-rk-gstreamer-full \
+	gstreamer1.0-libav \
 "
