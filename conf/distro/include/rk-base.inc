@@ -46,6 +46,7 @@ PREFERRED_PROVIDER_virtual/kernel = "linux-rockchip"
 
 DEFAULTTUNE_rk3036="cortexa7hf-neon-vfpv4"
 DEFAULTTUNE_rk3288="cortexa17hf-neon-vfpv4"
+DEFAULTTUNE_rk3328="aarch64"
 DEFAULTTUNE_rk3399="aarch64"
 
 LICENSE_FLAGS_WHITELIST="commercial"
