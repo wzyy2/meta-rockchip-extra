@@ -27,7 +27,7 @@ COMMON_INSTALL = " \
 "
 
 QT_DEMOS = " \
-	qt5everywheredemo \
+	carmachine-examples \
 "
 
 IMAGE_INSTALL += " \

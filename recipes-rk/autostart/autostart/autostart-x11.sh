@@ -11,8 +11,8 @@
 ### END INIT INFOsync
 
 # export QT_GSTREAMER_WIDGET_VIDEOSINK=rkximagesink
-# export QT_GSTREAMER_WINDOW_VIDEOSINK=rkximagesink
+export QT_GSTREAMER_WINDOW_VIDEOSINK=rkximagesink
 export DISPLAY=:0.0
 
-cd /usr/share/qt5everywheredemo-1.0/
-sleep 1 && ./QtDemo &> /dev/null &
+cd /usr/share/qt5/examples/multimedia/Carmachine
+sleep 1 && ./Carmachine &

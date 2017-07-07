@@ -10,6 +10,8 @@
 #					 last tep in the boot process.
 ### END INIT INFO
 
+export QT_EGLFSPLATFORM_USE_GST_VIDEOSINK=1
+export QT_GSTREAMER_WINDOW_VIDEOSINK=kmssink
 export QT_QPA_PLATFORM=eglfs
 export QT_QPA_EGLFS_KMS_CONFIG=/tmp/qt.json
 
@@ -21,5 +23,5 @@ cat > /tmp/qt.json <<EOF
 }
 EOF
 
-cd /usr/share/qt5everywheredemo-1.0/
-./QtDemo &> /dev/null &
+cd /usr/share/qt5/examples/multimedia/Carmachine
+./Carmachine &
