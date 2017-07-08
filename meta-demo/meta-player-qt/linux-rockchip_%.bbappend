@@ -3,7 +3,6 @@
 
 SRC_URI += " \
 	file://linux-0007-drm-rockchip-make-video-overlay-bottom-layer.patch \
-	file://linux-0017-drm-skip-wait-on-vblank-for-set-plane.patch \
 "
 
 FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
