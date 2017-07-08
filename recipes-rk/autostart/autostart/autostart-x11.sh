@@ -10,7 +10,7 @@
 #					 last tep in the boot process.
 ### END INIT INFOsync
 
-# export QT_GSTREAMER_WIDGET_VIDEOSINK=rkximagesink
+export QT_GSTREAMER_WIDGET_VIDEOSINK=rkximagesink
 export QT_GSTREAMER_WINDOW_VIDEOSINK=rkximagesink
 export DISPLAY=:0.0
 
