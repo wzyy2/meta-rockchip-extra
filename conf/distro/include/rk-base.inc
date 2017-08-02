@@ -15,7 +15,6 @@ DISTROOVERRIDES = "rockchip"
 PREFERRED_VERSION_libdrm = "rk"
 PREFERRED_VERSION_xserver-xorg = "rk"
 PREFERRED_VERSION_xserver-nodm-init = "2.0"
-PREFERRED_VERSION_weston = "2.0.1"
 XSERVER ?= "xserver-xorg \
 		   xf86-input-libinput \
 		   xf86-video-modesetting"
