@@ -16,4 +16,5 @@ RDEPENDS_${PN} = " \
 	gstreamer1.0-plugins-good \
 	gstreamer1.0-plugins-bad \
 	gstreamer1.0-rockchip \
+	gstreamer1.0-rockchip-extra \
 "
