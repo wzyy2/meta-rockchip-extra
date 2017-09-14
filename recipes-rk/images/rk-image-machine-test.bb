@@ -14,6 +14,7 @@ IMAGE_FEATURES += " \
 require recipes-rk/images/rk-image-multimedia.bb
 
 AUTO_TEST_INSTALL = "\
+	v4l-utils \
 	glmark2 \
 	cpufrequtils \
 	usbutils \
