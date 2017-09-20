@@ -1,6 +1,0 @@
-# Introduction
-
-This repo contains many demo solutions for Rockchip SOC.
-Please see details in each subdirectory.
-
-To use them, please add the submeta package you want to use to bblayers.conf. 

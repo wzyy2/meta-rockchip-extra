@@ -5,4 +5,4 @@ IMAGE: qt5-image
 Bottom video layer + transparent qt UI.
 For video playback application.
 
-If you want to use it in other chip, you need modify the kernel patches.
+The kernel patches should be modified if you don't use it with RK3288.
